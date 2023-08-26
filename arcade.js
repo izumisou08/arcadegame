@@ -3,28 +3,24 @@ player_image.setAttribute('src', 'player.png');
 const player = document.createElement('div');
 player.className = 'block player';
 player.appendChild(player_image);
-console.log(player);
 
 const square_image = document.createElement('img');
 square_image.setAttribute('src','squares.png');
 const square = document.createElement('div');
 square.className = 'block squares';
 square.appendChild(square_image);
-console.log(square);
 
 const trap_image = document.createElement('img');
 trap_image.setAttribute('src','trap.png');
 const trap = document.createElement('div');
 trap.className = 'block trap';
 trap.appendChild(trap_image)
-console.log(trap);
 
 const goal_image = document.createElement('img');
 goal_image.setAttribute('src','goal.png');
 const goal = document.createElement('div');
 goal.className = 'block goal';
 goal.appendChild(goal_image);
-console.log(goal);
 
 
 
@@ -72,7 +68,6 @@ function movePlayer(block_parents, last_player_position, move_player_position_po
     if(next_player_position_element.children[0].classList.contains('goal')){
         clear_flag = true;
     }
-    console.log(next_player_position_element.children[0].classList.contains('trap'));
     removeAllChild(next_player_position_element);
     let new_player = player.cloneNode(true);
     next_player_position_element.appendChild(new_player);
@@ -82,10 +77,8 @@ function movePlayer(block_parents, last_player_position, move_player_position_po
     let new_square = square.cloneNode(true);
     last_player_position_element.appendChild(new_square);
     last_player_position_element.firstElementChild.setAttribute('id','block'+last_player_position);
-    console.log(player_position);
     if(clear_flag){
         const clear = document.getElementById('backcolor');
-        console.log(clear);
         //alert("clear");
         // clear = true;
         clear.style.visibility = "visible";
@@ -112,7 +105,7 @@ function createStage(){
     
     const block_parents = document.getElementsByClassName("block_parent");
 
-    console.log(block_parents[1]);
+    
     
     for(let i = 0;i < 64; i++){
         removeAllChild(block_parents[i]);

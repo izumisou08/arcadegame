@@ -1,0 +1,91 @@
+ul{
+    list-style: none;
+    margin: 0;
+}
+.yokonarabi{
+    display: flex;
+}
+#gameArea{
+    width: 720px;
+    height: 720px;
+    margin: 0;
+    display: flex;
+    
+}
+#gameGrid{
+    width: 720px;
+    height: 720px;
+    background-image: url(stage.png);
+    background-size: 120% 120%;
+    background-position: center;
+    position: relative;
+    margin: 0;
+}
+#buttonArea{
+    justify-content: center;
+}
+#clear{
+    color:gold;
+    font-size: 83px;
+    font-weight: bold;
+}
+#backcolor{
+    background-color: #5E009E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 650px;
+    height: 350px;
+    visibility: hidden;
+}
+#stage{
+    width: 900px;
+    height: 900px;
+}
+#gameGrid img{
+    width: 100%;
+    height: 100%;
+}
+.squares img{
+    width: 100%;
+    height: 100%;
+}
+.trap img{
+    width: 100%;
+    height: 100%;
+}
+.player img{
+    width: 85%;
+    height: 85%;
+}
+.goal img{
+    width: 90%;
+    height: 90%;
+}
+.block{
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* #stage{
+    width: 900px;
+    height: 900px;
+}
+#stage img{
+    width: 100%;
+    height: 100%;
+} */
+
+ul{
+    padding: 0px;
+}
+html,body{
+    overflow: hidden;
+    margin: 0;
+}

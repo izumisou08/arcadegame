@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アーケードゲーム</title>
+    <script src="arcade.js"></script>
+    <link rel="stylesheet" href="arcade.css">
+    <!-- <img id="stage" src="stage.png"> -->
+</head>
+
+<body>
+    <div id="gameArea">
+        <div id="gameGrid">
+            <ul>
+                <li>
+                    <div id="layer1" class="layers">
+                        <ul class="line yokonarabi">
+                            <li class="block_parent">
+
+                                <div id="block1" class="block player"><img src="player.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block2" class="block squares"><img src="squares.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block3" class="block squares"><img src="squares.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block4" class="block trap"><img id="reset_trap" src="trap.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block5" class="block squares"><img src="squares.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block6" class="block trap"><img src="trap.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block7" class="block trap"><img src="trap.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block8" class="block trap"><img src="trap.png"></div>
+
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div id="layer2" class="layers">
+                        <ul class="line yokonarabi">
+                            <li class="block_parent">
+
+                                <div id="block9" class="block squares"><img src="squares.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block10" class="block trap"><img src="trap.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block11" class="block squares"><img src="squares.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block12" class="block trap"><img src="trap.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block13" class="block squares"><img src="squares.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block14" class="block trap"><img src="trap.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block15" class="block squares"><img src="squares.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block16" class="block trap"><img src="trap.png"></div>
+
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div id="layer3" class="layers">
+                        <ul class="line yokonarabi">
+                            <li class="block_parent">
+
+                                <div id="block17" class="block squares"><img src="squares.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block18" class="block trap"><img src="trap.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block19" class="block squares"><img src="squares.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block20" class="block trap"><img src="trap.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block21" class="block squares"><img src="squares.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block22" class="block squares"><img src="squares.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block23" class="block squares"><img src="squares.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block24" class="block goal"><img src="goal.png"></div>
+
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div id="layer4" class="layers">
+                        <ul class="line yokonarabi">
+                            <li class="block_parent">
+
+                                <div id="block25" class="block squares"><img src="squares.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+                                <label for="squares26">
+                                    <div id="block" class="block squares"><img src="squares.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block27" class="block trap"><img src="trap.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block28" class="block squares"><img src="squares.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block29" class="block squares"><img src="squares.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block30" class="block trap"><img src="trap.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block31" class="block squares"><img src="squares.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block32" class="block trap"><img src="trap.png"></div>
+
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div id="layer5" class="layers">
+                        <ul class="line yokonarabi">
+                            <li class="block_parent">
+
+                                <div id="block33" class="block squares"><img src="squares.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block34" class="block squares"><img src="squares.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block35" class="block squares"><img src="squares.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block36" class="block squares"><img src="squares.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block37" class="block squares"><img src="squares.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block38" class="block trap"><img src="trap.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block39" class="block trap"><img src="trap.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block40" class="block trap"><img src="trap.png"></div>
+
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div id="layer6" class="layers">
+                        <ul class="line yokonarabi">
+                            <li class="block_parent">
+
+                                <div id="block41" class="block squares"><img src="squares.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block42" class="block trap"><img src="trap.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block43" class="block squares"><img src="squares.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block44" class="block trap"><img src="trap.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block45" class="block squares"><img src="squares.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block46" class="block squares"><img src="squares.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block47" class="block squares"><img src="squares.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block48" class="block trap"><img src="trap.png"></div>
+
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div id="layer7" class="layers">
+                        <ul class="line yokonarabi">
+                            <li class="block_parent">
+
+                                <div id="block49" class="block squares"><img src="squares.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block50" class="block trap"><img src="trap.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block51" class="block squares"><img src="squares.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block52" class="block trap"><img src="trap.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block53" class="block squares"><img src="squares.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block54" class="block trap"><img src="trap.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block55" class="block squares"><img src="squares.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block56" class="block trap"><img src="trap.png"></div>
+
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div id="layer8" class="layers">
+                        <ul class="line yokonarabi">
+                            <li class="block_parent">
+
+                                <div id="block57" class="block trap"><img src="trap.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block58" class="block squares"><img src="squares.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block59" class="block squares"><img src="squares.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block60" class="block trap"><img src="trap.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block61" class="block squares"><img src="squares.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block62" class="block trap"><img src="trap.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block63" class="block trap "><img src="trap.png"></div>
+
+                            </li>
+                            <li class="block_parent">
+
+                                <div id="block64" class="block trap"><img src="trap.png"></div>
+
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <div id="test">
+                <div id="backcolor">
+                    <div id="clear"><p>GAME CLEAR</p></div>
+                </div>
+            </div>
+        </div>
+        <div id="buttonArea">
+           <input id="resetbutton" type="button" value="リセット" onclick="window.location.reload()">
+           <input id="nextstagebutton" type="button" value="次のステージ" onclick="createStage()" disabled>
+        </div>
+    </div>
+    
+</body>
+
+</html>

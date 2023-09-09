@@ -14,7 +14,7 @@ const trap_image = document.createElement('img');
 trap_image.setAttribute('src','trap.png');
 const trap = document.createElement('div');
 trap.className = 'block trap';
-trap.appendChild(trap_image)
+trap.appendChild(trap_image);
 
 const goal_image = document.createElement('img');
 goal_image.setAttribute('src','goal.png');
@@ -25,9 +25,9 @@ goal.appendChild(goal_image);
 
 
 let player_position = 1;
+let map_count = 0;
 
 const reset_trap = document.querySelectorAll('block trap');
-//const reset_trap = document.getElementsByClassName('trap');
 
 const player_move_point_up = -8;
 const player_move_point_down = 8;
@@ -79,8 +79,6 @@ function movePlayer(block_parents, last_player_position, move_player_position_po
     last_player_position_element.firstElementChild.setAttribute('id','block'+last_player_position);
     if(clear_flag){
         const clear = document.getElementById('backcolor');
-        //alert("clear");
-        // clear = true;
         clear.style.visibility = "visible";
         const next_stage = document.getElementById('nextstagebutton');
         next_stage.disabled = false;
@@ -106,46 +104,68 @@ function createStage(){
     const block_parents = document.getElementsByClassName("block_parent");
 
     
-    
     for(let i = 0;i < 64; i++){
         removeAllChild(block_parents[i]);
-        if(map[i] == 0){
+        if(map[map_count][i] == 0){
             let new_player = player.cloneNode(true);
             block_parents[i].appendChild(new_player);
             player_position = i+1;
         }
-        else if(map[i] == 1){
+        else if(map[map_count][i] == 1){
             let new_square = square.cloneNode(true);
             block_parents[i].appendChild(new_square);
         }
-        else if(map[i] == 2){
+        else if(map[map_count][i] == 2){
             let new_trap = trap.cloneNode(true);
             block_parents[i].appendChild(new_trap);
         }
-        else if(map[i] == 3){
+        else if(map[map_count][i] == 3){
             let new_goal = goal.cloneNode(true);
             block_parents[i].appendChild(new_goal);
         }
-        //let new_square = square.cloneNode(true);
         
         block_parents[i].firstElementChild.setAttribute('id','block'+(i+1));
     }
-    
+    map_count++;
 }
 
-const map = [0,1,1,2,1,2,2,2,
+const map = [[0,1,1,2,1,2,2,2,
              1,2,1,2,1,2,2,2,
              2,2,1,2,1,1,1,3,
              1,1,1,2,1,1,2,2,
              1,1,1,2,1,1,2,2,
              2,1,2,1,1,2,2,2,
              2,1,2,1,1,2,2,1,
-             1,1,1,1,2,1,1,2]
-// const map = [2,2,2,2,2,2,2,2,
-//              2,0,1,1,1,2,3,2,
-//              2,1,2,2,1,2,1,2,
-//              2,1,2,1,1,1,1,2,
-//              2,1,1,1,2,2,1,2,
-//              2,2,2,2,2,2,1,2,
-//              2,1,1,1,1,1,1,2,
-//              2,2,2,2,2,2,2,2]
+             1,1,1,1,2,1,1,2],
+             [2,2,2,2,2,2,2,2,
+             2,0,1,1,1,2,3,2,
+             2,1,2,2,1,2,1,2,
+             2,1,2,1,1,1,1,2,
+             2,1,1,1,2,2,1,2,
+             2,2,2,2,2,2,1,2,
+             2,1,1,1,1,1,1,2,
+             2,2,2,2,2,2,2,2],
+             [0,1,1,2,1,2,2,3,
+             2,2,1,1,2,2,2,1,
+             2,1,1,1,2,1,1,1,
+             1,1,2,1,2,2,1,2,
+             1,2,2,2,2,1,1,1,
+             1,1,2,1,2,2,1,2,
+             1,2,1,1,1,1,1,2,
+             1,1,1,2,2,1,2,1],
+             [1,2,1,2,2,1,1,1,
+             2,1,1,1,1,1,2,1,
+             2,1,2,2,1,2,1,1,
+             1,1,1,2,2,2,2,1,
+             2,1,2,2,1,2,1,1,
+             1,1,1,2,1,1,1,2,
+             1,2,2,2,1,1,2,2,
+             3,2,2,1,2,1,1,0],
+             [2,1,1,2,1,1,1,1,
+             1,2,2,1,1,2,1,2,
+             2,2,2,1,1,2,1,2,
+             2,2,1,1,2,1,1,1,
+             2,2,1,1,2,1,1,1,
+             1,1,1,2,2,1,2,2,
+             1,1,2,1,2,1,2,1,
+             3,2,2,1,2,1,1,0]]

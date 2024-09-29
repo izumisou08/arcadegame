@@ -82,12 +82,6 @@ function movePlayer(block_parents, last_player_position, move_player_position_po
         clear.style.visibility = "visible";
         const next_stage = document.getElementById('nextstagebutton');
         next_stage.disabled = false;
-        // if (map_count === map.length - 1) {
-        //     map_count = 0; 
-        // } else {
-        //     map_count++; 
-        // }
-        // createStage();
     }
 }
 

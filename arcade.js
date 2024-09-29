@@ -132,7 +132,11 @@ function createStage(){
         
         block_parents[i].firstElementChild.setAttribute('id','block'+(i+1));
     }
-    map_count++;
+    if (map_count === map.length - 1) {
+        map_count = 0; 
+    } else {
+        map_count++;
+    }
 }
 
 const map = [[0,1,1,2,1,2,2,2,

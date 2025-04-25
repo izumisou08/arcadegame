@@ -1,3 +1,5 @@
+console.log("JavaScript loaded!");
+
 const player_image = document.createElement('img');
 player_image.setAttribute('src', 'player.png');
 const player = document.createElement('div');
